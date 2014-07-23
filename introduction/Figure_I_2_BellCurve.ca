@@ -2,10 +2,6 @@
 require draw
 require user_input
 
-def linear_map(number x, Vec2 fromRange, Vec2 toRange)
-  ratio = (x - fromRange[0]) / (fromRange[1] - fromRange[0])
-  return toRange[0] + ratio * (toRange[1] - toRange[0])
-
 draw.background(#fff)
 
 e = 2.71828183

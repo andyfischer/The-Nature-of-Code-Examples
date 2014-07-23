@@ -1,6 +1,15 @@
 
 
 chapter = "introduction"
-file = concat(chapter "/Figure_I_2_BellCurve.ca")
+files = [
+  "Figure_I_2_BellCurve.ca"
+  "Figure_I_5_Noise1DGraph.ca"
+  "Figure_I_6_RandomGraph.ca"
+]
+
+
+--file = concat(chapter "/Figure_I_2_BellCurve.ca")
+file = concat(chapter "/" files.last)
+
 
 load_script(file|rpath).call
