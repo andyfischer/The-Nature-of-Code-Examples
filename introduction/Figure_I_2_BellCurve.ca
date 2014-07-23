@@ -1,0 +1,29 @@
+
+require draw
+require user_input
+
+def linear_map(number x, Vec2 fromRange, Vec2 toRange)
+  ratio = (x - fromRange[0]) / (fromRange[1] - fromRange[0])
+  return toRange[0] + ratio * (toRange[1] - toRange[0])
+
+draw.background(#fff)
+
+e = 2.71828183
+width = env(:size).x
+height = env(:size).y
+mean = 0
+sd = linear_map(user_input.mouse.x, [0 width], [0.4 2])
+
+numSteps = 200
+
+points = for step in 0..numSteps
+  x = linear_map(step [0 numSteps] [0 width])
+  xcoord = linear_map(x [0 width] [-3 3])
+  sq2pi = sqrt(2 * 3.14159256)
+  xmsq = -1 * (xcoord-mean) * (xcoord-mean)
+  sdsq = sd*sd
+  px = (1 / (sd * sq2pi)) * (pow(e, (xmsq/sdsq)))
+  y = linear_map(px [0 1] [height-50 50])
+  [x y]
+
+draw.line_list(#000 points 1.0)

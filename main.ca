@@ -1,6 +1,6 @@
 
 
 chapter = "introduction"
-file = concat(chapter "/NOC_I_4_Gaussian.ca")
+file = concat(chapter "/Figure_I_2_BellCurve.ca")
 
 load_script(file|rpath).call
