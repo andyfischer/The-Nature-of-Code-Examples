@@ -1,0 +1,6 @@
+
+
+chapter = "introduction"
+file = concat(chapter "/NOC_I_1_RandomWalkTraditional.ca")
+
+load_script(file|rpath).call
