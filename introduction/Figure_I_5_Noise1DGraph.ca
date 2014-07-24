@@ -7,9 +7,9 @@ draw.background(#fff)
 width = env(:size).x
 height = env(:size).y
 
-steps = 500
+steps = 200
 points = for i in 0..steps
-  x = linear_map(i [0 steps] [0 width])
+  x = i.map([0 steps] [0 width])
   y = noise(time.elapsed() + x*0.01) * height
   [x y]
 

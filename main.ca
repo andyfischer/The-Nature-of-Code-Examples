@@ -5,6 +5,7 @@ files = [
   "Figure_I_2_BellCurve.ca"
   "Figure_I_5_Noise1DGraph.ca"
   "Figure_I_6_RandomGraph.ca"
+  "NOC_I_5_NoiseWalk.ca"
 ]
 
 
