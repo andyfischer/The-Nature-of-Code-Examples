@@ -10,7 +10,7 @@ files = [
 
 
 --file = concat(chapter "/Figure_I_2_BellCurve.ca")
-file = concat(chapter "/" files.last)
+file = concat(chapter "/" files[2])
 
 
 load_script(file|rpath).call

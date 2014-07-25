@@ -10,10 +10,7 @@ height = env(:size).y
 mean = 0
 sd = user_input.mouse.x.map([0 width], [0.4 2])
 
-numSteps = 200
-
-points = for step in 0..numSteps
-  x = step.map([0 numSteps] [0 width])
+points = for x in 0..round(width)
   xcoord = x.map([0 width] [-3 3])
   sq2pi = sqrt(2 * 3.14159256)
   xmsq = -1 * (xcoord-mean) * (xcoord-mean)

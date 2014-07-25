@@ -8,9 +8,7 @@ draw.background(#fff)
 width = env(:size).x
 height = env(:size).y
 
-steps = 200
-points = for i in 0..steps
-  x = i.map([0 steps] [0 width])
+points = for x in 0..round(width)
   y = rand() * height
   [x y]
 
